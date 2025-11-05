@@ -1,0 +1,76 @@
+% =====================================================================
+% Generic Research Paper Template
+% Template by: Daniel Solano (github.com/DasterSociety)
+% =====================================================================
+
+\documentclass[10pt,letterpaper,twocolumn]{article}
+
+% ---------- PACKAGES ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.96]{XCharter}  % Modern, clean Charter font
+\usepackage[top=0.75in, bottom=1in, left=0.625in, right=0.625in, columnsep=0.17in]{geometry}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{amsmath, amssymb}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{authblk}
+\usepackage{lineno}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{abstract}
+
+% ---------- DOCUMENT SETTINGS ----------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+\setstretch{1.05}
+
+% make section titles tighter for two-column look
+\titlespacing*{\section}{0pt}{1.5ex plus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.0ex plus .2ex}{0.8ex plus .2ex}
+
+% Abstract format for two columns
+\renewcommand{\abstractnamefont}{\normalfont\bfseries}
+\renewcommand{\abstracttextfont}{\small}
+% \doublespacing % Uncomment if needed for drafts
+% \linenumbers % Uncomment if journal requires
+
+% ---------- TITLE & AUTHOR ----------
+\title{\vspace{-0.5cm}\bfseries Your Paper Title Here}
+\author[1]{Your Name}
+\affil[1]{Your Department, Your Institution, City, Country}
+\date{\vspace{-0.5cm}\today}
+
+% =====================================================================
+\begin{document}
+
+\twocolumn[
+	\maketitle
+
+	\begin{abstract}
+		\input{sections/01_abstract.tex}
+	\end{abstract}
+	\vspace{0.5cm}
+]
+
+\input{sections/02_introduction.tex}
+\input{sections/03_methods.tex}
+\input{sections/04_results.tex}
+\input{sections/05_discussion.tex}
+\input{sections/06_conclusion.tex}
+
+\bibliographystyle{unsrtnat}
+\bibliography{references/references}
+
+\end{document}
+% =====================================================================

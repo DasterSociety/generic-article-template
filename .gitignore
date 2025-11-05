@@ -1,0 +1,47 @@
+# Claude Code project instructions (keep local only)
+CLAUDE.md
+SESSION_NOTES.md
+NEW_PAPER_USAGE.md
+
+# macOS
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.out
+*.nav
+*.snm
+*.bbl
+*.blg
+*.lof
+*.lot
+*.bcf
+*.run.xml
+*.vrb
+*.xdv
+
+# BibTeX/Biber
+*.bib.bak
+*.bib.sav
+
+# Build directories
+_minted-*/
+*.pyg
+
+# Editor/IDE files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Output (keep PDF tracked by default, uncomment to ignore)
+# main.pdf

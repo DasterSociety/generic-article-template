@@ -1,0 +1,92 @@
+% =====================================================================
+% article-draft.sty
+% LaTeX style package for scientific article drafts
+% Template by: Daniel Solano (github.com/DasterSociety)
+% =====================================================================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{article-draft}[2025/11/05 Article Draft Template Style]
+
+% ---------- PACKAGE OPTIONS ----------
+\newif\if@linenumbers
+\@linenumbersfalse
+\DeclareOption{linenumbers}{\@linenumberstrue}
+
+\newif\if@doublespace
+\@doublespacefalse
+\DeclareOption{doublespace}{\@doublespacetrue}
+
+\ProcessOptions\relax
+
+% ---------- REQUIRED PACKAGES ----------
+% Font and encoding
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[scaled=.96]{XCharter}  % Modern, clean Charter font
+
+% Page layout
+\RequirePackage[top=0.75in, bottom=1in, left=0.625in, right=0.625in, columnsep=0.17in]{geometry}
+
+% Graphics and figures
+\RequirePackage{graphicx}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+
+% Math
+\RequirePackage{amsmath, amssymb}
+\RequirePackage{siunitx}
+
+% Tables
+\RequirePackage{booktabs}
+
+% Hyperlinks and references
+\RequirePackage{hyperref}
+\RequirePackage[numbers]{natbib}
+\RequirePackage{cleveref}
+
+% Author and formatting
+\RequirePackage{authblk}
+\RequirePackage{lineno}  % Line numbering package
+\RequirePackage{setspace}
+\RequirePackage{xcolor}
+\RequirePackage{titlesec}
+\RequirePackage{abstract}
+
+% ---------- DOCUMENT CONFIGURATION ----------
+% Hyperref settings
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	citecolor=blue,
+	urlcolor=blue
+}
+
+% Line spacing - default is 1.05, unless doublespace option is used
+\if@doublespace
+	\doublespacing
+\else
+	\setstretch{1.05}
+\fi
+
+% Section title spacing for two-column layout
+\titlespacing*{\section}{0pt}{1.5ex plus .2ex}{1ex plus .2ex}
+\titlespacing*{\subsection}{0pt}{1.0ex plus .2ex}{0.8ex plus .2ex}
+
+% Abstract formatting
+\renewcommand{\abstractnamefont}{\normalfont\bfseries}
+\renewcommand{\abstracttextfont}{\small}
+
+% Line numbers configuration (if option enabled)
+\if@linenumbers
+	% Customize line number appearance: small, gray, sans-serif font
+	\renewcommand\linenumberfont{\normalfont\scriptsize\sffamily\color{blue}}
+
+	% Reduce spacing between line numbers and text
+	\setlength\linenumbersep{3pt}
+
+	% Enable line numbers that restart on each page
+	\pagewiselinenumbers
+\fi
+
+\endinput
+% =====================================================================

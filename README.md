@@ -91,6 +91,7 @@ Change from numeric to author-year:
 ## Document Settings
 
 ### Page Layout
+
 - **Paper**: US Letter (8.5" × 11")
 - **Margins**: Top 0.75in, Bottom 1in, Left/Right 0.625in
 - **Column separation**: 0.17in
@@ -98,6 +99,7 @@ Change from numeric to author-year:
 - **Line spacing**: 1.05 stretch
 
 ### Key Packages
+
 - **XCharter**: Modern Charter font family
 - **natbib**: Bibliography management (numeric style)
 - **hyperref**: Clickable links and cross-references
@@ -111,9 +113,11 @@ Change from numeric to author-year:
 ## Adding Content
 
 ### Sections
+
 Edit section files directly in `sections/`. They are automatically included in `main.tex`.
 
 ### Figures
+
 Place images in `figures/` and reference them:
 
 ```latex
@@ -128,6 +132,7 @@ Place images in `figures/` and reference them:
 For full-width figures spanning both columns, use `figure*` environment.
 
 ### Citations
+
 Add references to `references/references.bib` in BibTeX format, then cite:
 
 ```latex
@@ -139,6 +144,7 @@ Add references to `references/references.bib` in BibTeX format, then cite:
 ## Journal Compatibility
 
 This template provides accurate length prediction (±10%) for:
+
 - IEEE Transactions
 - Elsevier journals
 - Springer journals
@@ -152,5 +158,4 @@ This template is provided as-is for academic and research use.
 
 ## Author
 
-Daniel H. Solano Teran
-School of Engineering and Sciences, Tecnológico de Monterrey
+Daniel Solano - [www.daster.org](https://www.daster.org)
